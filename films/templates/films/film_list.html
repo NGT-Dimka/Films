@@ -1,0 +1,22 @@
+<link type="text/css" href="style.css" rel="stylesheet">
+
+{% extends 'films/base.html'%}
+
+{% block title %}
+<h2>Список фильмов</h2>
+{% endblock %}
+
+{% block main %}
+    {% for film in object_list %}
+        <h2><a href="{{ film.get_absolute_url }}">{{ film.title_film }}</a></h2>
+        <p><img src="{{ Films.Posters }}"/>{{ film.poster }}</p>
+        <p>{{ film.genre }}</p>
+        <p>{{ film.year_pub }}</p>
+        <p>{{ film.producer }}</p>
+        <p>{{ film.budget }}</p>
+        <p>{{ film.fees }}</p>
+        <p>{{ film.duration }}</p>
+    {% empty %}
+	<p>Нет фильмов</p>
+    {% endfor %}
+{% endblock %}

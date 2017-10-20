@@ -1,0 +1,181 @@
+. {
+	max-width: 100%;
+	font-family: "Arial", Helvetica, sans-serif;
+	font-size: small;
+	text-decoration: none;
+}
+
+title {
+	text-align: center;
+	color: #000000;
+	font-size: medium;
+}
+
+header {
+	width: 1366px;
+	height: 768px;
+	background: url("usr/home/work/Films/films/templates/films/images/img.jpg") center;
+}
+
+body {
+	background: #6E6E6E;
+	text-align: center;
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: small;
+	color: #000000;
+}
+
+h1 {
+    background: #6E6E6E;
+	text-align: left;
+	font-family: "Arial", Helvetica, sans-serif;
+	font-size: small;
+	color: #000000;
+}
+
+h2 {
+    font-family: "Arial", Helvetica, sans-serif;
+	font-size: small;
+	color: #333333;
+	margin-top: 0px;
+}
+
+p, ol, ul {
+    font-family: "Arial", Helvetica, sans-serif;
+	font-size: small;
+	color: #000000;
+}
+
+a {
+	color: #333333;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+div {
+	background: #6E6E6E;
+	text-align: center;
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: small;
+	color: #000000;
+}
+
+footer {
+	text-align: center;
+	text-decoration: none;
+	color: #000000;
+	font-family: "Arial", Helvetica, sans-serif;
+	font-size:x-small;
+}
+
+/* Header */
+
+#header {
+	width: 600px;
+	height: 258px;
+	margin: 0px auto;
+}
+
+#header h1 {
+	margin: 0px;
+	padding: 160px 0 0 380px;
+	font-size: 52px;
+	font-style: italic;
+	color: #2D2D2D;
+}
+
+#header h2 {
+	margin: 0;
+	padding: 0 0 0 380px;
+	font-size: 16px;
+	font-style: italic;
+	color: #000000;
+}
+
+#header a {
+	text-decoration: none;
+	color: #FFFFFF;
+}
+
+/* Menu */
+
+#menu {
+	width: 600px;
+	height: 52px;
+	margin: 0px auto;
+}
+
+#menu ul {
+	margin: 0px;
+	padding: 0px;
+	list-style: none;
+}
+
+#menu li {
+	display: inline;
+}
+
+#menu a {
+	display:inline;
+	float: left;
+	width: 120px;
+	height: 42px;
+	padding-top: 10px;
+	text-align: left;
+	text-decoration: none;
+	font-size: 20px;
+	letter-spacing: -2px;
+	color: #000000;
+}
+
+/* Content */
+
+#content {
+	background: #FFFFFF;
+	width: 600px;
+	margin: 0px auto;
+	padding: 2px 0px 0px 0px;
+}
+
+#content .poster {
+	background-position: left;
+	height: 150px;
+	width: 300px;
+}
+
+#content h1 {
+	padding: 5px 0px 5px 5px;
+	color: #173E68;
+}
+
+#content h2 {
+	padding: 5px 0px 5px 5px;
+	text-transform: uppercase;
+	font-size: 16px;
+	color: #2D2D2D;
+	border-bottom: 1px dashed;
+}
+
+/* Footer */
+
+#footer {
+	width: 200px;
+	margin: 0px auto;
+	padding: 3px 0px;
+	height: 50px;
+	background: #EEEEEE;
+}
+
+#footer p {
+	text-align: center;
+	margin: 0px;
+	padding-top: 15px;
+	font-size: 11px;
+	color: #999999;
+}
+
+#footer {
+	text-align: center;
+}

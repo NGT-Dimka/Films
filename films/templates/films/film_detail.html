@@ -1,0 +1,19 @@
+<link type="text/css" href="style.css" rel="stylesheet">
+
+{% extends 'films/base.html'%}
+
+{% block title %}
+<h2>{{ film.title_film }}</h2>
+{% endblock %}
+
+{% block main %}
+    <h2>{{ film.title_film }}</h2>
+        <p><img src="{{ Films.Posters }}"/>{{ film.poster }}</p>
+        <p>{{ film.genre }}</p>
+        <p>{{ film.year_pub }}</p>
+        <p>{{ film.producer }}</p>
+        <p>{{ film.budget }}</p>
+        <p>{{ film.fees }}</p>
+        <p>{{ film.duration }}</p>
+    <p>{{ film.content }}</p>
+{% endblock %}

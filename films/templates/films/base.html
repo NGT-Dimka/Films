@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta http-equiv="Content-Type" content="text/html" charset="windows-1251">
+    <link type="text/css" href="style.css" rel="stylesheet">
+    <title>Киносайт</title>
+    <style> table{ width: 100%; border-spacing: 0;}
+    tr {background: url("images/img.jpg")}</style>
+</head>
+<body>
+    <div id="header">
+        <h1>Киносайт</h1>
+        <h2>{% block title %}{% endblock %}</h2>
+    </div>
+
+    <div id="menu" title="Меню">
+        <ul>
+            <li><a title="Главная" href="film_list.html"></a></li>
+            <li><a title="Профиль" href="userprofile_detail.html"></a></li>
+            <li><a title="Регистрация" href="registration.html"></a></li>
+        </ul>
+    </div>
+
+    <div id="main">
+        {% block main %}
+        {% endblock %}
+    </div>
+
+    <div id="footer">
+        <p>2017. All right reserved </p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<link type="text/css" href="style.css" rel="stylesheet">
+
+{% extends 'films/base.html'%}
+
+{% block title %}
+<h2>{{ userprofile.user.username }}</h2>
+{% endblock %}
+
+{% block main %}
+    <h2>{{ userprofile.user.first_name }}</h2>
+        <p>{{ userprofile.user.last_name }}</p>
+        <p>{{ userprofile.avatar }}</p>
+        <p>{{ userprofile.birth_date }}</p>
+        <p>{{ userprofile.location }}</p>
+        <p>{{ userprofile.user.email }}</p>
+        <p>{{ userprofile.user.password }}</p>
+{% endblock %}
