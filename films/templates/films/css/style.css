@@ -5,19 +5,19 @@
 	text-decoration: none;
 }
 
-title {
+.title {
 	text-align: center;
 	color: #000000;
 	font-size: medium;
 }
 
-header {
+.header {
 	width: 1366px;
 	height: 768px;
 	background: url("usr/home/work/Films/films/templates/films/images/img.jpg") center;
 }
 
-body {
+.body {
 	background: #6E6E6E;
 	text-align: center;
 	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
@@ -25,7 +25,7 @@ body {
 	color: #000000;
 }
 
-h1 {
+.h1 {
     background: #6E6E6E;
 	text-align: left;
 	font-family: "Arial", Helvetica, sans-serif;
@@ -33,28 +33,28 @@ h1 {
 	color: #000000;
 }
 
-h2 {
+.h2 {
     font-family: "Arial", Helvetica, sans-serif;
 	font-size: small;
 	color: #333333;
 	margin-top: 0px;
 }
 
-p, ol, ul {
+.p, .ol, .ul {
     font-family: "Arial", Helvetica, sans-serif;
 	font-size: small;
 	color: #000000;
 }
 
-a {
+.a {
 	color: #333333;
 }
 
-a:hover {
+.a:hover {
 	text-decoration: none;
 }
 
-div {
+.div {
 	background: #6E6E6E;
 	text-align: center;
 	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
@@ -62,7 +62,7 @@ div {
 	color: #000000;
 }
 
-footer {
+.footer {
 	text-align: center;
 	text-decoration: none;
 	color: #000000;
