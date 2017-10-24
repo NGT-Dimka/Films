@@ -9,7 +9,7 @@ from django.http import Http404, HttpResponse
 
 
 class Film(models.Model):
-    poster = models.ImageField(verbose_name="Постер фильма", blank=True)
+    poster = models.ImageField(upload_to="films/media/films/Posters/", verbose_name="Постер фильма", blank=True)
     title_film = models.CharField(max_length=255, verbose_name='Название:')
     year_pub = models.DateField(verbose_name='Выход в прокат:')
     genre = models.CharField(max_length=255, verbose_name='Жанр:')

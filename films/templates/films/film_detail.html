@@ -1,4 +1,4 @@
-<link type="text/css" href="css/style.css" rel="stylesheet">
+<link type="text/css" href="style.css" rel="stylesheet">
 
 {% extends 'films/base.html'%}
 {% load static %}
@@ -9,12 +9,12 @@
 {% endblock %}
 
 {% block main %}
-        <p><img src="{{ film.poster }}" height="700" width="490" hspace="30" vspace="20"/></p>
-        <p>{{ film.genre }}</p>
-        <p>{{ film.year_pub }}</p>
-        <p>{{ film.producer }}</p>
-        <p>{{ film.budget }}</p>
-        <p>{{ film.fees }}</p>
-        <p>{{ film.duration }}</p>
-    <p>{{ film.content }}</p>
+        <p><img src="{{ film.poster.file }}" height="700" width="490" hspace="30" vspace="20"/></p>
+        <p>title="Жанр:" {{ film.genre }}</p>
+        <p>"Дата выхода:"{{ film.year_pub }}</p>
+        <p>"Продюсер:"{{ film.producer }}</p>
+        <p>"Бюджет:"{{ film.budget }}</p>
+        <p>"Сборы:"{{ film.fees }}</p>
+        <p>"Продолжительность:"{{ film.duration }}</p>
+    <p>"Сюжет: "{{ film.content }}</p>
 {% endblock %}
