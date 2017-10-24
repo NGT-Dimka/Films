@@ -12,9 +12,9 @@
 }
 
 .header {
-	width: 1366px;
-	height: 768px;
-	background: url("images/img.jpg") center;
+	background-image: url('images/Back.jpg');
+    height: 50%;
+    width: 100%;
 }
 
 .body {
