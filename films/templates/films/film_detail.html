@@ -9,7 +9,7 @@
 {% endblock %}
 
 {% block main %}
-        <p><img src="{{ film.poster.file }}" height="700" width="490" hspace="30" vspace="20"/></p>
+        <p><img src="{% static film.poster %}" height="700" width="490" hspace="30" vspace="20"/></p>
         <p>Жанр: {{ film.genre }}</p>
         <p>Дата выхода: {{ film.year_pub }}</p>
         <p>Продюсер: {{ film.producer }}</p>
