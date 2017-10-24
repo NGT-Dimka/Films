@@ -11,12 +11,12 @@
     {% for film in object_list %}
         <h2><a href="{{ film.get_absolute_url }}">{{ film.title_film }}</a></h2>
         <p><a href="{{ film.get_absolute_url }}" ><img src="{{ film.poster }}" height="300" width="210" hspace="30" vspace="20"/></a></p>
-        <p>{{ film.genre }}</p>
-        <p>{{ film.year_pub }}</p>
-        <p>{{ film.producer }}</p>
-        <p>{{ film.budget }}</p>
-        <p>{{ film.fees }}</p>
-        <p>{{ film.duration }}</p>
+        <p>Жанр: {{ film.genre }}</p>
+        <p>Дата выхода: {{ film.year_pub }}</p>
+        <p>Продюсер: {{ film.producer }}</p>
+        <p>Бюджет, млн. $: {{ film.budget }}</p>
+        <p>Сборы, млн. $: {{ film.fees }}</p>
+        <p>Продолжительность, мин: {{ film.duration }}</p>
     {% empty %}
 	<p>Нет фильмов</p>
     {% endfor %}
