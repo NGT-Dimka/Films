@@ -13,7 +13,7 @@ urlpatterns = [
 urlpatterns += staticfiles_urlpatterns()
 if settings.DEBUG:
     urlpatterns += [
-        url(r'^media/films/Posters/(?P<path>.*)$', serve, {
+        url(r'^media/(?P<pk>\w+)/$', serve, {
             'document_root': settings.MEDIA_ROOT,
         }),
     ]
