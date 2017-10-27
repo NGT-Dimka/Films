@@ -14,10 +14,23 @@ Including another URLconf
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
 from django.conf.urls import url, include
+from django.conf.urls.static import static
 from django.contrib import admin
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
+from django.views.static import serve
+
+from Films import settings
+
 admin.autodiscover()
 
-urlpatterns = (
-    url(r'^admin/', admin.site.urls),
-    url(r'^films/', include('films.urls')),
-)
+urlpatterns = [
+                  url(r'^admin/', admin.site.urls),
+                  url(r'^films/', include('films.urls')),
+              ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+urlpatterns += staticfiles_urlpatterns()
+if settings.DEBUG:
+    urlpatterns += [
+        url(r'^media/(?P<pk>\w+)/$', serve, {
+            'document_root': settings.MEDIA_ROOT,
+        }),
+    ]
