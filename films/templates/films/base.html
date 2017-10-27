@@ -19,12 +19,6 @@
     </div>
 </div>
     <title>Киносайт</title>
-</head>
-<body>
-    <div id="header">
-        <h2>{% block title %}{% endblock %}</h2>
-    </div>
-
     <div id="menu" title="Меню">
         <ul>
             <li><a name="Главная" href="film_list.html"></a></li>
@@ -32,7 +26,11 @@
             <li><a name="Регистрация" href="registration.html"></a></li>
         </ul>
     </div>
-
+</head>
+<body>
+    <div id="header">
+        <h2>{% block title %}{% endblock %}</h2>
+    </div>
     <div id="main">
         {% block main %}
         {% endblock %}
