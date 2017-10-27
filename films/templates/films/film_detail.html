@@ -7,11 +7,18 @@
 
 {% block main %}
         <p><img src="{% static film.poster %}" height="700" width="490" hspace="30" vspace="20"/></p>
+        <hr>
         <p>Жанр: {{ film.genre }}</p>
+        <hr>
         <p>Дата выхода: {{ film.year_pub }}</p>
+        <hr>
         <p>Продюсер: {{ film.producer }}</p>
+        <hr>
         <p>Бюджет, млн. $: {{ film.budget }}</p>
+        <hr>
         <p>Сборы, млн. $: {{ film.fees }}</p>
+        <hr>
         <p>Продолжительность, мин: {{ film.duration }}</p>
+        <hr>
     <p>Сюжет: <br><br> {{ film.content }}</p>
 {% endblock %}
