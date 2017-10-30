@@ -1,0 +1,12 @@
+{% extends 'films/base.html'%}
+{% load static %}
+
+{% block title %}
+<h2>{% title="Регистрация" %}</h2>
+{% endblock %}
+
+{% block main %}
+        <ul>
+        {{ form.as_ul }}
+        </ul>
+{% endblock %}
