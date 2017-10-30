@@ -8,12 +8,12 @@
     <link type="text/css" href="{% static style.css %}" rel="stylesheet">
     <link type="text/css" href="{% static bootstrap.css.bootstrap.css %}" rel="stylesheet">
     <div title="Вход">
-        <form name="Вход" action="user_profile_detail.html" method="get">
+        <form name="Вход" method="get">
             <p>Почта<input name="Login" title="Введите логин или почту">Пароль<input type="Password" name="Pass" title="Введите пароль"></p>
             <p><input type="submit" value="Вход" title="Вход"><input type="reset" title="Очистить форму" value="Очистить форму"></p>
         </form>
-        <form name="Reg" action="registration.html">
-            <p><input type="button" value="Регистрация" title="Регистрация" href="registration.html"></p>
+        <form name="Reg" method="get">
+            <p><input type="button" value="Регистрация" title="Регистрация" href="films/static/registration.html"></p>
         </form>
     </div>
     <title>Киносайт</title>

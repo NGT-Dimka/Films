@@ -4,7 +4,6 @@ from films.models import Film, UserProfile
 from django.views.generic import ListView, DetailView
 
 
-
 class FilmsListView(ListView):
     model = Film
 
@@ -15,3 +14,4 @@ class FilmDetailView(DetailView):
 
 class UserProfileDetailView(DetailView):
     model = UserProfile
+

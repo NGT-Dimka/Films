@@ -1,4 +1,3 @@
-from films.models import UserProfile
 from films.views import FilmsListView, FilmDetailView, UserProfileDetailView
 from django.conf.urls import url
 
