@@ -1,12 +1,12 @@
 @font-face {
     font-family: "Arial", Helvetica, sans-serif;
-	font-size: small;
+	font-size: medium;
 }
 
 * {
 	max-width: 100%;
 	font-family: "Arial", Helvetica, sans-serif;
-	font-size: small;
+	font-size: medium;
 	text-decoration: none;
 }
 
@@ -14,16 +14,15 @@
 	text-align: center;
 	color: #000000;
 	font-size: medium;
+	background-image: url('images/img.jpg');
 }
 
 .head {
-    height: 50%;
-    width: 100%;
+
 }
 
 .header {
-    height: 50%;
-    width: 100%;
+
 }
 
 .form {
@@ -35,38 +34,38 @@
 }
 
 .body {
-	background: #6E6E6E;
+	background: #F0E68C;
 	text-align: center;
 	font-family: "Arial", Helvetica, sans-serif;
 	font-size: small;
 	color: #000000;
+	padding: 40px;
 }
 
 .h1 {
-    background: #6E6E6E;
-	text-align: left;
 	font-family: "Arial", Helvetica, sans-serif;
-	font-size: small;
+	font-size: medium;
 	color: #000000;
 }
 
 .h2 {
     font-family: "Arial", Helvetica, sans-serif;
-	font-size: small;
+	font-size: 40px;
 	color: #333333;
 	margin-top: 0px;
 }
 
 .p, .ol, .ul {
     font-family: "Arial", Helvetica, sans-serif;
-	font-size: small;
+	font-size: medium;
 	color: #000000;
+	padding: 40px;
 }
 
 .a {
-    color: #333333;
+    color: #003bb3;
     font-family: "Arial", Helvetica, sans-serif;
-    font-size: small;
+    font-size: medium;
 }
 
 .a:hover {
@@ -82,7 +81,7 @@
 .footer {
 	text-align: center;
 	text-decoration: none;
-	color: #000000;
+	color: #942a25;
 	font-family: "Arial", Helvetica, sans-serif;
 	font-size:x-small;
 }
@@ -124,13 +123,13 @@
 	margin: 0px auto;
 	font-family: "Arial", Helvetica, sans-serif;
 	font-size: small;
-	color: #003366;
+	color: #c09853;
 }
 
 #menu ul {
 	margin: 0px;
 	padding: 0px;
-	list-style: none;
+	list-style: square outside;
 }
 
 #menu li {
@@ -153,8 +152,8 @@
 /* Content */
 
 #content {
-	background: #FFFFFF;
-	width: 600px;
+	background: #F0E68C;
+	width: 100%;
 	margin: 0px auto;
 	padding: 2px 0px 0px 0px;
 }
@@ -174,16 +173,15 @@
 	padding: 5px 0px 5px 5px;
 	text-transform: uppercase;
 	font-size: 16px;
-	color: #2D2D2D;
+	color: #22dd22;
 	border-bottom: 1px dashed;
 }
 
 /* Footer */
 
 #footer {
-	width: 200px;
+	width: 100%;
 	margin: 0px auto;
-	padding: 3px 0px;
 	height: 50px;
 	background: #EEEEEE;
 }
@@ -193,10 +191,5 @@
 	margin: 0px;
 	padding-top: 15px;
 	font-size: 11px;
-	color: #0e0e0e;
-    text-align: center;
-}
-
-#footer {
-	text-align: center;
+	color: #942a25;
 }
