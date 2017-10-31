@@ -17,13 +17,11 @@
 }
 
 .head {
-	background-image: url(images/Back.jpg);
     height: 50%;
     width: 100%;
 }
 
 .header {
-    background-image: url(images/Back.jpg);
     height: 50%;
     width: 100%;
 }
@@ -76,8 +74,6 @@
 }
 
 .div {
-	background: #6E6E6E;
-	text-align: center;
 	font-family: "Arial", Helvetica, sans-serif;
 	font-size: small;
 	color: #000000;
@@ -142,16 +138,16 @@
 }
 
 #menu a {
-	display:inline;
+	display:block;
 	float: left;
-	width: 120px;
-	height: 42px;
+	width: 40%;
+	height: 40%;
 	padding-top: 10px;
 	text-align: left;
 	text-decoration: none;
-	font-size: 20px;
+	font-size: small;
 	letter-spacing: -2px;
-	color: #000000;
+	color: #002a80;
 }
 
 /* Content */
@@ -197,7 +193,8 @@
 	margin: 0px;
 	padding-top: 15px;
 	font-size: 11px;
-	color: #999999;
+	color: #0e0e0e;
+    text-align: center;
 }
 
 #footer {
