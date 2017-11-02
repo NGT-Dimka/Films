@@ -5,7 +5,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html" charset="utf-8">
     <link type="text/css" href="{% static 'style.css' %}" rel="stylesheet">
-    <div id="login" title="Вход">
+    <div id="login">
         <form name="Login" method="get">
             <h1>Киносайт</h1>
             <p>Почта&#160;<input name="Login" title="Введите логин или почту">&#160;Пароль&#160;<input type="Password" name="Pass" title="Введите пароль"></p>
@@ -20,6 +20,8 @@
         <ul>
             <li><a name="Главная" href="film_list.html">Главная</a></li>
             <li><a name="Профиль" href="user_profile_detail.html">Профиль пользователя</a></li>
+            <li><a name="Вход" href="login.html">Вход</a></li>
+            <li><a name="Выход" href="logout.html">Выход</a></li>
         </ul>
     </div>
 </head>

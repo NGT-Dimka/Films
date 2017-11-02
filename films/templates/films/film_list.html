@@ -9,10 +9,10 @@
     {% for film in object_list %}
         <h2><a href="{{ film.get_absolute_url }}">{{ film.title_film }}</a></h2>
         <table width="100%" cellspacing="0" cellpadding="5">
-        <td>
+        <td id="poster">
         <p><a href="{{ film.get_absolute_url }}" ><img src="{% static film.poster %}" height="400" width="280" hspace="30" vspace="20"/></a></p>
         </td>
-        <td>
+        <td id="content">
         <p>Жанр: {{ film.genre }}</p>
         <hr>
         <p>Дата выхода: {{ film.year_pub }}</p>

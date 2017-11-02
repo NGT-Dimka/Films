@@ -1,0 +1,11 @@
+{% extends 'films/base.html'%}
+{% load static %}
+
+{% block title %}
+<h2>Выход</h2>
+{% endblock %}
+
+{% block main %}
+    <p>Вы успешно выполнили выход</p>
+    <p><a href="{% url 'films' %}"></a>На главную</p>
+{% endblock %}
