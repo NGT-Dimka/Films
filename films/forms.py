@@ -1,7 +1,13 @@
-from django.forms import ModelForm
-from films.models import UserProfile
+from django import forms
+from films.models import Comment
 
 
-class UserProfileForm(ModelForm):
+class FilmComment(forms.ModelForm):
     class Meta:
-        model = UserProfile
+        model = Comment
+        exclude = []
+        widgets = {
+            'user': forms.HiddenInput(),
+            'content_type': forms.HiddenInput(),
+            'object_id': forms.HiddenInput()
+        }

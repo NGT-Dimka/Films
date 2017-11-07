@@ -2,33 +2,53 @@
 from __future__ import unicode_literals
 
 from django.shortcuts import render_to_response
-
-from films.models import Film, UserProfile
 from django.views.generic import ListView, DetailView
+from django.http.response import HttpResponseNotAllowed, HttpResponseBadRequest, HttpResponseRedirect
+from django.contrib.contenttypes.models import ContentType
+
+from films.models import Film
+from films.forms import FilmComment
 
 
 class FilmsListView(ListView):
     model = Film
+    queryset = Film.objects.select_related('producer').all()
+
+
+class FilmsListView(ListView):
+    model = Film
+    Film.objects.select_related('Genre').all()
 
 
 class FilmDetailView(DetailView):
     model = Film
 
+    def get_context_data(self, **kwargs):
+        context = super(FilmDetailView, self).get_context_data(**kwargs)
+        context['comment_form'] = FilmComment(data={
+            'object_id': self.kwargs['pk'],
+            'user': self.request.user.id,
+            'content_type': ContentType.objects.get_for_model(Film)
+        })
+        context['comments'] = self.get_object().comments
+        return context
 
-class UserProfileDetailView(DetailView):
-    model = UserProfile
+
+def post_film_comment(request):
+    if request.method != "POST":
+        return HttpResponseNotAllowed(permitted_methods=['POST'])
+
+    form = FilmComment(request.POST)
+    if not form.is_valid():
+        return HttpResponseBadRequest()
+
+    form.save()
+
+    return HttpResponseRedirect(redirect_to=request.POST.get('next'))
 
 
 def user_profile(request):
     return render_to_response('films/user_profile_detail.html')
-
-
-def login(request):
-    return render_to_response('films/login.html')
-
-
-def logout(request):
-    return render_to_response('films/logout.html')
 
 
 def film_list(request):
