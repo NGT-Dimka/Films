@@ -15,9 +15,10 @@ class FilmsListView(ListView):
     queryset = Film.objects.select_related('producer').all()
 
 
-class FilmsListView(ListView):
+class FilmsView(ListView):
     model = Film
-    Film.objects.select_related('Genre').all()
+    Film.objects.select_related('genre').all()
+    template_name = 'films/film_list.html'
 
 
 class FilmDetailView(DetailView):
@@ -50,10 +51,3 @@ def post_film_comment(request):
 def user_profile(request):
     return render_to_response('films/user_profile_detail.html')
 
-
-def film_list(request):
-    return render_to_response('films/film_list.html')
-
-
-def film_detail(request):
-    return render_to_response('films/film_detail.html')

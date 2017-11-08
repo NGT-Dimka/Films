@@ -22,14 +22,14 @@ class Producer(models.Model):
 
 
 class Genres(models.Model):
-    genre = models.CharField(max_length=255, verbose_name='Жанр')
+    genres = models.CharField(max_length=255, verbose_name='Жанр')
 
     class Meta:
         verbose_name = 'Жанр'
         verbose_name_plural = 'Жанры'
 
     def __str__(self):
-        return self.genre
+        return self.genres
 
 
 class Comment(models.Model):
