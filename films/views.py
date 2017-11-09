@@ -15,7 +15,7 @@ class FilmsListView(ListView):
     queryset = Film.objects.select_related('producer').all()
 
 
-class FilmsView(ListView):
+class GenreView(ListView):
     model = Film
     Film.objects.select_related('genre').all()
     template_name = 'films/film_list.html'

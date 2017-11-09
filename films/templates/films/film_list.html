@@ -15,8 +15,8 @@
             </td>
             <td id="content">
                 <p>Жанр: {% for key, value in film.genre.values_list %}
-                          {{ value }}
-                          {% endfor %}</p>
+                          <a href="{{ film.get_absolute_url }}">{{ value }}</a>
+                {% endfor %}</p>
                 <hr>
                 <p>Дата выхода: {{ film.year_pub }}</p>
                 <hr>

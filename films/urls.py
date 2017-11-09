@@ -1,4 +1,4 @@
-from films.views import FilmsListView, FilmDetailView, post_film_comment
+from films.views import FilmsListView, FilmDetailView, post_film_comment, GenreView
 from django.conf.urls import url
 
 urlpatterns = [
