@@ -22,7 +22,7 @@ class Producer(models.Model):
 
 
 class Genres(models.Model):
-    genres = models.CharField(max_length=255, verbose_name='Жанр')
+    genres = models.TextField(verbose_name='Жанр')
 
     class Meta:
         verbose_name = 'Жанр'
