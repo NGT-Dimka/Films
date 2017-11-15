@@ -21,6 +21,7 @@ from django.views.static import serve
 from Films import settings
 from films.views import FilmsListView
 
+
 admin.autodiscover()
 
 urlpatterns = [

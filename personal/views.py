@@ -1,7 +1,5 @@
-from django.views.generic import ListView, DetailView
-
+from django.views.generic import DetailView
 from films.models import Producer
-
 
 # Create your views here.
 
@@ -9,3 +7,4 @@ from films.models import Producer
 class ProducerDetailView(DetailView):
     model = Producer
     template_name = 'producer_detail.html'
+

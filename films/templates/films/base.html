@@ -39,7 +39,15 @@
 <div id="menu" title="Меню">
     <ul>
         <li><a name="Главная" href="{% url 'index' %}">Главная</a></li>
-        <li><a name="Профиль" href="user_profile_detail.html">Профиль пользователя</a></li>
+        <li>{% if request.user.is_authenticated %}
+        <a name="Профиль" href="{% url 'films:user_profile' film.user_id %}">Профиль пользователя</a>
+            <form action="{% url 'admin:logout' %}" method="post">
+            {% csrf_token %}
+            <input type="hidden" name="next" value="{% url 'index' %}">
+                <input type="submit" value="Выйти"></form>
+        {% else %}
+                <form name="Login" action="{% url 'admin:login' %}" method="post"></form>
+        {% endif %}</li>
     </ul>
 </div>
 <div id="header">

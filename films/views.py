@@ -6,13 +6,18 @@ from django.views.generic import ListView, DetailView
 from django.http.response import HttpResponseNotAllowed, HttpResponseBadRequest, HttpResponseRedirect
 from django.contrib.contenttypes.models import ContentType
 
-from films.models import Film
+from films.models import Film, UserProfile
 from films.forms import FilmComment
 
 
 class FilmsListView(ListView):
     model = Film
     queryset = Film.objects.select_related('producer').all()
+
+
+class UserProfileDetailView(DetailView):
+    model = UserProfile
+    template_name = 'films/user_profile_detail.html'
 
 
 class GenreView(ListView):
@@ -46,10 +51,6 @@ def post_film_comment(request):
     form.save()
 
     return HttpResponseRedirect(redirect_to=request.POST.get('next'))
-
-
-def user_profile(request):
-    return render_to_response('films/user_profile_detail.html')
 
 
 def film_list(request):
