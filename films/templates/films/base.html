@@ -30,7 +30,6 @@
             <div class="form-container">
                 <input type="submit" value="Вход" title="Вход">
                 <input type="reset" title="Очистить форму" value="Очистить форму">
-                <input type="button" value="Регистрация" title="Регистрация" href="films/static/registration.html">
             </div>
         </form>
     {% endif %}
@@ -39,12 +38,11 @@
 <div id="menu" title="Меню">
     <ul>
         <li><a name="Главная" href="{% url 'index' %}">Главная</a></li>
+        <li><a name="Регистрация" href="{% url 'films:registration' %}">Регистрация</a></li>
         <li>{% if request.user.is_authenticated %}
-        <a name="Профиль" href="{% url 'films:user_profile' film.UserProfile.user_id %}">Профиль пользователя</a>
-            <form action="{% url 'admin:logout' %}" method="post">
+        <a name="Профиль" href="{% url 'films:user_profile' film.user.id %}">Профиль пользователя</a>
             {% csrf_token %}
             <input type="hidden" name="next" value="{% url 'index' %}">
-                <input type="submit" value="Выйти"></form>
         {% else %}
                 <form name="Login" action="{% url 'admin:login' %}" method="post"></form>
         {% endif %}</li>
