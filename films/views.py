@@ -17,6 +17,7 @@ class FilmsListView(ListView):
 
 class UserProfileDetailView(DetailView):
     model = UserProfile
+    UserProfile.objects.select_related('user_id').all()
     template_name = 'films/user_profile_detail.html'
 
 

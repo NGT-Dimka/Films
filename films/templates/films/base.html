@@ -40,7 +40,7 @@
     <ul>
         <li><a name="Главная" href="{% url 'index' %}">Главная</a></li>
         <li>{% if request.user.is_authenticated %}
-        <a name="Профиль" href="{% url 'films:user_profile' film.user_id %}">Профиль пользователя</a>
+        <a name="Профиль" href="{% url 'films:user_profile' film.UserProfile.user_id %}">Профиль пользователя</a>
             <form action="{% url 'admin:logout' %}" method="post">
             {% csrf_token %}
             <input type="hidden" name="next" value="{% url 'index' %}">

@@ -83,13 +83,14 @@ class Film(models.Model):
 
 
 class UserProfile(models.Model):
-    user_id = User.pk
-    user_name = User.first_name
-    login = User.email
-    password = User.password
+    user = models.OneToOneField(User, verbose_name='Пользователь:')
     location = models.CharField(max_length=100, blank=True, verbose_name='Населенный пункт:')
     birth_date = models.DateField(blank=True, verbose_name='Дата рождения:')
     avatar = models.ImageField(verbose_name='Аватар:')
+
+    class Meta:
+        verbose_name = 'Профиль'
+        verbose_name_plural = 'Профили'
 
     @staticmethod
     def create_user_profile(instance, created):
@@ -102,6 +103,3 @@ class UserProfile(models.Model):
 
     def __str__(self):
         return self.user_id
-
-    def __unicode__(self):
-        return self.user_name
