@@ -1,22 +1,16 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 from django.shortcuts import render_to_response
-from django.views.generic import ListView, DetailView, TemplateView
+from django.views.generic import ListView, DetailView
 from django.http.response import HttpResponseNotAllowed, HttpResponseBadRequest, HttpResponseRedirect
 from django.contrib.contenttypes.models import ContentType
 from films.models import Film
-from users.models import Profile
 from films.forms import FilmComment
 
 
 class FilmsListView(ListView):
     model = Film
     queryset = Film.objects.select_related('producer').all()
-
-
-class RegistrationView(TemplateView):
-    model = Profile
-    template_name = 'films/registration.html'
 
 
 class GenreView(ListView):

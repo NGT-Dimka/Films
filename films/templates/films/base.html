@@ -38,7 +38,7 @@
 <div id="menu" title="Меню">
     <ul>
         <li><a name="Главная" href="{% url 'index' %}">Главная</a></li>
-        <li><a name="Регистрация" href="{% url 'films:registration' %}">Регистрация</a></li>
+        <li><a name="Регистрация" href="{% url 'users:registration' %}">Регистрация</a></li>
         <li>{% if request.user.is_authenticated %}
         <a name="Профиль" href="{% url 'users:user_profile' user.id %}">Профиль пользователя</a>
             {% csrf_token %}
