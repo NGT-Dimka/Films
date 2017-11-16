@@ -1,0 +1,15 @@
+{% extends 'films/base.html'%}
+{% load static %}
+
+{% block title %}
+<h2>{{ profile.user.username }}</h2>
+{% endblock %}
+
+{% block main %}
+    <h2>{{ profile.user.first_name }}</h2>
+        <p>{{ profile.user.last_name }}</p>
+        <p>{{ profile.avatar }}</p>
+        <p>{{ profile.birth_date }}</p>
+        <p>{{ profile.location }}</p>
+        <p>{{ profile.user.email }}</p>
+{% endblock %}

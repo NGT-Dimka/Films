@@ -1,0 +1,9 @@
+{% extends 'films/base.html' %}
+
+{% block main %}
+    {{ producer.full_name }}
+    {% for film in producer.film_set.all %}
+        {{ film.title_film }}
+    {% endfor %}
+
+{% endblock %}
