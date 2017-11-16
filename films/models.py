@@ -81,25 +81,3 @@ class Film(models.Model):
     def __str__(self):
         return self.title_film
 
-
-class UserProfile(models.Model):
-    user = models.OneToOneField(User, verbose_name='Пользователь:')
-    location = models.CharField(max_length=100, blank=True, verbose_name='Населенный пункт:')
-    birth_date = models.DateField(blank=True, verbose_name='Дата рождения:')
-    avatar = models.ImageField(verbose_name='Аватар:')
-
-    class Meta:
-        verbose_name = 'Профиль'
-        verbose_name_plural = 'Профили'
-
-    @staticmethod
-    def create_user_profile(instance, created):
-        if created:
-            UserProfile.objects.create(user=instance)
-
-    @staticmethod
-    def save_user_profile(instance):
-        instance.UserProfile.save()
-
-    def __str__(self):
-        return self.user_id

@@ -40,7 +40,7 @@
         <li><a name="Главная" href="{% url 'index' %}">Главная</a></li>
         <li><a name="Регистрация" href="{% url 'films:registration' %}">Регистрация</a></li>
         <li>{% if request.user.is_authenticated %}
-        <a name="Профиль" href="{% url 'films:user_profile' film.user.id %}">Профиль пользователя</a>
+        <a name="Профиль" href="{% url 'users:user_profile' user.id %}">Профиль пользователя</a>
             {% csrf_token %}
             <input type="hidden" name="next" value="{% url 'index' %}">
         {% else %}

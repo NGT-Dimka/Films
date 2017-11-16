@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
-
 from django.shortcuts import render_to_response
 from django.views.generic import ListView, DetailView, TemplateView
 from django.http.response import HttpResponseNotAllowed, HttpResponseBadRequest, HttpResponseRedirect
 from django.contrib.contenttypes.models import ContentType
-from films.models import Film, UserProfile
+from films.models import Film
+from users.models import Profile
 from films.forms import FilmComment
 
 
@@ -14,13 +14,8 @@ class FilmsListView(ListView):
     queryset = Film.objects.select_related('producer').all()
 
 
-class UserProfileView(TemplateView):
-    model = UserProfile
-    template_name = 'films/user_profile_detail.html'
-
-
 class RegistrationView(TemplateView):
-    model = UserProfile
+    model = Profile
     template_name = 'films/registration.html'
 
 
@@ -64,6 +59,3 @@ def film_list(request):
 def film_detail(request):
     return render_to_response('films/film_detail.html')
 
-
-def user_profile_detail(request):
-    return render_to_response('films/user_profile_detail.html', id())
