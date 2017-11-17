@@ -9,8 +9,6 @@
         <form method="post" class="post-form">
         {% csrf_token %}
         {{ form.as_p }}
-        <input name="login" type="text" value="{{ user.username }}">Введите логин</input>
-        <input name="password" type="text" value="{{ password }}">
         <input type="submit" name="login" value="Зарегистрироваться">
         </form>
 {% endblock %}
