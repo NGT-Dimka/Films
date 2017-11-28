@@ -1,0 +1,26 @@
+{% extends 'films/base.html' %}
+{% load static %}
+
+{% block title %}
+    <h2>Регистрация</h2>
+{% endblock %}
+
+{% block main %}
+    <form method="post" class="post-form">
+        {% csrf_token %}
+        {% for field in user_form %}
+            <div>
+                {{ field.name }}: {{ field }}
+            </div>
+        {% endfor %}
+
+        {% for field in profile_form %}
+            <div>
+                {{ field.name }}: {{ field }}
+            </div>
+        {% endfor %}
+
+
+        <input type="submit" value="Зарегистрироваться">
+    </form>
+{% endblock %}

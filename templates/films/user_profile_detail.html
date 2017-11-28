@@ -1,4 +1,4 @@
-{% extends 'films/base.html'%}
+{% extends 'films/base.html' %}
 {% load static %}
 
 {% block title %}
@@ -10,11 +10,11 @@
         <hr>
         <p>{{ user.last_name }}</p>
         <hr>
-        <p>{{ profile.avatar }}</p>
+        <p>{{ user.avatar }}</p>
         <hr>
-        <p>{{ birth_date }}</p>
+        <p>{{ user.birth_date }}</p>
         <hr>
-        <p>{{ location }}</p>
+        <p>{{ user.location }}</p>
         <hr>
         <p>{{ user.email }}</p>
 {% endblock %}

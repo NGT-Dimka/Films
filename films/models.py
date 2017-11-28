@@ -1,11 +1,10 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 from django.db import models
-from django.contrib.auth.models import User
 from django.http import Http404, HttpResponse
 from django.contrib.contenttypes.fields import GenericRelation, GenericForeignKey
 from django.contrib.contenttypes.models import ContentType
-
+from users.models import User
 
 # Create your models here.
 
@@ -46,7 +45,7 @@ class Comment(models.Model):
 
 
 class Film(models.Model):
-    poster = models.ImageField(upload_to="films/media/films/Posters/", verbose_name="Постер фильма", blank=True)
+    poster = models.ImageField(upload_to="posters/", verbose_name="Постер фильма", blank=True)
     title_film = models.CharField(max_length=255, verbose_name='Название:')
     year_pub = models.DateField(verbose_name='Выход в прокат:')
     genre = models.ManyToManyField(Genres, verbose_name='Жанр:')

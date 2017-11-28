@@ -10,7 +10,7 @@
         <h2><a href="{{ film.get_absolute_url }}">{{ film.title_film }}</a></h2>
         <table width="100%" cellspacing="0" cellpadding="5">
             <td id="poster">
-                <p><a href="{{ film.get_absolute_url }}"><img src="{% static film.poster %}" height="400" width="280"
+                <p><a href="{{ film.get_absolute_url }}"><img src="{{ film.poster.url }}" height="400" width="280"
                                                               hspace="30" vspace="20"/></a></p>
             </td>
             <td id="content">

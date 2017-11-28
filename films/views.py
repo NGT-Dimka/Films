@@ -21,6 +21,7 @@ class GenreView(ListView):
 
 class FilmDetailView(DetailView):
     model = Film
+    queryset = Film.objects.select_related('producer')
 
     def get_context_data(self, **kwargs):
         context = super(FilmDetailView, self).get_context_data(**kwargs)

@@ -8,12 +8,12 @@
 {% block main %}
     <table width="100%" cellspacing="0" cellpadding="20">
         <td id="poster" width="40%">
-            <p><img src="{% static film.poster %}" height="600" width="420" hspace="10" vspace="5"/></p>
+            <p><img src="{{ film.poster.url }}" height="600" width="420" hspace="10" vspace="5"/></p>
         </td>
         <td id="content" width="60%">
             <p>Жанр: {% for key, value in film.genre.values_list %}
-                          {{ value }}
-                          {% endfor %}</p>
+                {{ value }}
+            {% endfor %}</p>
             <hr>
             <p>Дата выхода: {{ film.year_pub }}</p>
             <hr>
