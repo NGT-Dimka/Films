@@ -7,14 +7,13 @@ from .forms import UserForm
 
 # Create your views here.
 
-
-def profile_detail(request):
-    return render_to_response('films/user_profile_detail.html')
-
-
 class NewUserView(TemplateView):
     model = User
     template_name = 'films/user_profile_detail.html'
+
+
+def profile_detail(request):
+    return render_to_response('films/user_profile_detail.html')
 
 
 def registration(request):
